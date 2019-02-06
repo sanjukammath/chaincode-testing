@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
 
 
     config.vm.box = "bento/ubuntu-16.04"
+    config.vm.boot_timeout = 600
 
     config.ssh.username = 'vagrant'
     config.ssh.password = 'vagrant'
@@ -67,6 +68,7 @@ Vagrant.configure("2") do |config|
     # And comment out the following section
     # Configuration for Virtual Box
     config.vm.provider :virtualbox do |vb|
+      vb.name = "chaincode-testing"
       # Change the memory here if needed - 2 Gb memory on Virtual Box VM
       vb.customize ["modifyvm", :id, "--memory", "2048", "--cpus", "1"]
       # Change this only if you need destop for Ubuntu - you will need more memory
