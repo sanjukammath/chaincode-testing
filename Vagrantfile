@@ -63,6 +63,8 @@ Vagrant.configure("2") do |config|
     # This gets executed for both vm1 & vm2
     #config.vm.provision "shell", inline:  "echo 'All good'"
     config.vm.provision "shell", inline:  $script
+
+    config.vm.provision "docker"
   
     # To use a diffrent Hypervisor create a section config.vm.provider
     # And comment out the following section

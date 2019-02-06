@@ -12,9 +12,13 @@ $ vagrant ssh
 
 In the vagrant shell vagrant@vagrant:/vagrant$, run the following commands
 
+$ docker --version
+
+If docker is not installed, you can try(skip if installed):
+
 $ cd setups/
 $ chmod 777 install-docker.sh
 $ sudo bash ./install-docker.sh
 
-On prompt Do you want to continue? [Y/n] enter y (might need to do it twice)
+
 
